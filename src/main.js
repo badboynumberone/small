@@ -7,6 +7,7 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 import store from './store/index';
 import show from './utils/show';
+
 Vue.prototype.$show = show;
 import VueLazyload from 'vue-lazyload';
 Vue.use(VueLazyload, {

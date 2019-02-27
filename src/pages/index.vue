@@ -132,6 +132,7 @@ export default {
         async getData(){
             this.$show.showLoading();
             let location = await getCityFromGPS();
+            console.log(location)
             if(!location.street){
                  this.$show.showNotice('定位失败');
             }

@@ -73,9 +73,10 @@ export default new Router({
       name: 'Shops',
       component: Shops,
       meta:{
-        isTabbar:true,
+        
         title:"店铺详情",
-        isArrow:true
+        isArrow:true,
+        isRefresh:true
       }
     }
   ],

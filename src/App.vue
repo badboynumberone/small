@@ -9,7 +9,7 @@
               @click-left="onClickLeft"
             />
         <!-- 下拉刷新 -->
-        <van-pull-refresh v-model="isLoading" @refresh="onRefresh" :disabled="isPull">
+        <van-pull-refresh v-model="isLoading" @refresh="onRefresh" :disabled="$route.meta.isRefresh">
             <!-- 页面显示加载效果 -->
 
             <transition :name="transitionName">
@@ -39,7 +39,6 @@ export default {
         transitionName:"",//过渡动画
         rightText:"",//上边按钮是否有文字
         isLoading:false,//
-        isPull:false,//是否禁用下拉
         excludeTransitions:['Index','Collection','Me','Record'],
         bindKey:[1,2],//除此之外的特效
         keepAlive:['Index']
